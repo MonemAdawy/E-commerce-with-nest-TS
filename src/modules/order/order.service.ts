@@ -9,7 +9,7 @@ import { ProductService } from '../product/product.service';
 import { OrderStatus, PaymentMethod } from 'src/DB/models/order.model';
 import { PaymentService } from 'src/common/services/payment/payment.service';
 import { Cache, CACHE_MANAGER } from '@nestjs/cache-manager';
-import { PaginateInput } from 'src/common/graphql/inputs/Paginate.input';
+import { PaginateInput } from 'src/common/graphql/inputs/paginate.input';
 
 @Injectable()
 export class OrderService {
