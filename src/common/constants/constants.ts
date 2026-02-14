@@ -1,0 +1,3 @@
+export const CLOUDINARY = 'CLOUDINARY';
+
+export const STRIPE_CLIENT = 'STRIPE_CLIENT'

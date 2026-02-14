@@ -1,0 +1,59 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type AllOrderResponse {
+  totalSize: Int!
+  totalPages: Int!
+  pageSize: Int!
+  pageNumber: Int!
+  data: [OneOrderResponse!]!
+}
+
+type OneUserResponse {
+  _id: ID!
+  firstName: String!
+  lastName: String!
+}
+
+type OneOrderResponse {
+  _id: ID!
+  user: OneUserResponse!
+  phone: String!
+  address: String!
+  orderStatus: String!
+  price: Float!
+  paymentMethod: String!
+  paid: Boolean!
+}
+
+type Test {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Query {
+  allOrders(paginate: PaginateInput): AllOrderResponse!
+  test(id: Int!): Test!
+}
+
+input PaginateInput {
+  page: Int!
+}
+
+type Mutation {
+  createTest(createTestInput: CreateTestInput!): Test!
+  updateTest(updateTestInput: UpdateTestInput!): Test!
+  removeTest(id: Int!): Test!
+}
+
+input CreateTestInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateTestInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
