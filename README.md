@@ -80,14 +80,6 @@ npm run test
 npm run test:e2e
 ```
 
----
-
-## 🌍 Live Demo (Optional)
-
-Deployed API (GraphQL & REST): [YourLiveDemoLinkHere](#)
-Postman Collection: [YourPostmanLinkHere](#)
-
-> ⚠️ Replace the placeholders with your actual deployment URL and Postman collection link.
 
 ---
 
