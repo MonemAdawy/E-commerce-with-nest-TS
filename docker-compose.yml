@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+      - redis
+    environment:
+      MONGO_URI: mongodb://mongo:27017/ecommercenest
+      REDIS_LOCAL: redis://redis:6379
+      JWT_SECRET: AdkLIghd$
+      ACCESS_TOKEN_EXPIRATION: 1d
+      REFRESH_TOKEN_EXPIRATION: 7d
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run start:dev
+
+  mongo:
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  redis:
+    image: redis:8
+    ports:
+      - "6379:6379"
+
+volumes:
+  mongo-data:

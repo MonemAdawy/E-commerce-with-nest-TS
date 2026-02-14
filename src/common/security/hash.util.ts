@@ -1,5 +1,5 @@
 import { ConfigService } from '@nestjs/config';
-import * as bcrypt from 'bcrypt';
+import * as bcrypt from 'bcryptjs';
 // import {config} from 'dotenv';
 // config();
 
